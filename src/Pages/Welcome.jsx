@@ -32,7 +32,7 @@ const Welcome = () => {
   return (
     <div>
       <div className="welcome h-screen flex flex-col items-center justify-center bg-gray-100 text-center relative">
-        <img src={text} alt="" className="object-contain md:scale-50 absolute top-56 md:top-10" />
+        <img src={text} alt="" className="object-contain md:scale-50 absolute top-20 sm:top-10" />
 
         <div className="px-6 md:px-24 py-6 backdrop-blur-sm border rounded-md">
         <h1 className="text-4xl font-bold mb-8">Wanna Fly High?</h1>
