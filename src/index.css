@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+.welcome{
+  background-color: rgb(255, 255, 255);
+  background-image: url('../src/assets/bg-new.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width:600px){
+  .welcome{
+    background-size: contain;
+    background-position: bottom;
+  }
+}
+
+.head{
+  font-family: "Bokor", system-ui;
+}
