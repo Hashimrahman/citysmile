@@ -37,41 +37,110 @@
 
 // export default Hero;
 
+// import { FaPlay } from "react-icons/fa";
+// import Image from "./Hero_Assets/Image.png";
+// import Decore from "./Hero_Assets/Decore.png";
+// import TextDecore from "./Hero_Assets/Text-Decore.png";
+// // import temp from "./Hero_Assets/"
+
+// const Hero = () => {
+//   return (
+//     <div className="relative m-0 overflow-hidden">
+//       {/* Background Decor */}
+//       <img
+//         src={Decore}
+//         alt="background decor"
+//         className="absolute top-0 left-0 w-full h-auto object-cover -z-10"
+//       />
+
+//       {/* Content */}
+//       <div className="h-screen flex items-center gap-10 flex-wrap md:flex-nowrap md:mx-14 mt-20 sm:mt-0 w-full">
+//         <div className="w-full md:w-1/2 md:p-16 flex flex-col gap-6">
+//           <h3 className="text-lg md:text-xl text-flamingo_red w-full">Best Destinations around the world</h3>
+//           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-navyBlue font-volkhov w-full bg-yellow-300">
+//             Travel, <span className="relative w-full pr-32 text-left font-volkhov"><img className="absolute bottom-4 -z-10 -left-5 w-full" src={TextDecore} alt="" />enjoy</span>
+//             <br /> and live a new
+//             <br /> and full life
+//           </h1>
+//           <p className="text-grayBlue text-justify">
+//             Built Wicket longer admire do barton vanity itself do in it.
+//             Preferred to sportsmen it engrossed listening. Park gate sell they
+//             west hard for the.
+//           </p>
+//           <div className="flex gap-8">
+//             <button className="bg-golden_yellow text-white px-4 py-2 rounded-md shadow-secondary hover:scale-105 transition-all duration-500">
+//               Find Out More
+//             </button>
+//             <div className="flex gap-3 items-center hover:cursor-pointer hover:scale-105 transition-all duration-500 ">
+//               <button className="bg-flamingo_red p-3 rounded-full shadow-primary">
+//                 <FaPlay />
+//               </button>
+//               <h5>Play more</h5>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="hidden md:inline-block w-1/2 p-16 h-full">
+//           <div className="w-full h-full flex items-center justify-center">
+//             <img
+//               src={Image}
+//               alt="Travel destination"
+//               className="w-full h-auto"
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Hero;
+
+
 import { FaPlay } from "react-icons/fa";
 import Image from "./Hero_Assets/Image.png";
 import Decore from "./Hero_Assets/Decore.png";
 import TextDecore from "./Hero_Assets/Text-Decore.png";
-// import temp from "./Hero_Assets/"
 
 const Hero = () => {
   return (
-    <div className="relative m-0 overflow-hidden">
+    <div className="relative overflow-hidden">
       {/* Background Decor */}
       <img
         src={Decore}
         alt="background decor"
-        className="absolute top-0 left-0 w-full h-auto object-cover -z-10"
+        className="absolute top-0 left-0 w-full h-auto object-contain -z-10"
       />
 
       {/* Content */}
-      <div className="h-screen flex items-center gap-10 flex-wrap md:flex-nowrap mx-14">
-        <div className="w-1/2 p-16 flex flex-col gap-6">
-          <h3 className="text-xl text-flamingo_red">Best Destinations around the world</h3>
-          <h1 className="text-7xl font-extrabold tracking-tighter text-navyBlue font-volkhov">
-            Travel, <span className="relative w-full pr-32 text-left font-volkhov"><img className="absolute bottom-4 -z-10 -left-5 w-full" src={TextDecore} alt="" />enjoy</span>
+      <div className="h-screen grid grid-cols-1 lg:grid-cols-2 sm:mt-0 w-full place-items-center">
+        <div className=" md:p-16 flex flex-col gap-6 justify-center mx-10">
+          <h3 className="text-lg md:text-xl text-flamingo_red text-left">
+            Best Destinations around the world
+          </h3>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-navyBlue font-volkhov ">
+            Travel,{" "}
+            <span className="relative pr-32 text-left font-volkhov">
+              <img
+                className="absolute bottom-4 -z-10 w-full"
+                src={TextDecore}
+                alt=""
+              />
+              enjoy
+            </span>
             <br /> and live a new
             <br /> and full life
           </h1>
-          <p className="text-grayBlue">
+          <p className="text-grayBlue text-justify  ">
             Built Wicket longer admire do barton vanity itself do in it.
             Preferred to sportsmen it engrossed listening. Park gate sell they
             west hard for the.
           </p>
-          <div className="flex gap-8">
+          <div className="flex gap-8 ">
             <button className="bg-golden_yellow text-white px-4 py-2 rounded-md shadow-secondary hover:scale-105 transition-all duration-500">
               Find Out More
             </button>
-            <div className="flex gap-3 items-center hover:cursor-pointer hover:scale-105 transition-all duration-500 ">
+            <div className="flex gap-3 items-center hover:cursor-pointer hover:scale-105 transition-all duration-500">
               <button className="bg-flamingo_red p-3 rounded-full shadow-primary">
                 <FaPlay />
               </button>
@@ -80,7 +149,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-1/2 p-16 h-full">
+        <div className="hidden lg:inline-block  p-16 h-full ">
           <div className="w-full h-full flex items-center justify-center">
             <img
               src={Image}
@@ -95,3 +164,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

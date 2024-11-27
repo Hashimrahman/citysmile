@@ -4,17 +4,19 @@ import Hero from './Pages/Hero/Hero'
 import Navbar from './components/Navbar/Navbar'
 import Services from './Pages/Service_/Services'
 import Welcome from './Pages/Welcome'
+import Destinations from './Pages/Destinations/Destinations'
 
 function App() {
 
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Routes>
         <Route path='/' element={<Hero />} />
       </Routes>
-      <Services /> */}
-      <Welcome />
+      <Services />
+      <Destinations />
+      {/* <Welcome /> */}
     </>
   )
 }

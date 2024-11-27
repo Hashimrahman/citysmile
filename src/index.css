@@ -26,3 +26,13 @@
 .head{
   font-family: "Bokor", system-ui;
 }
+
+.service-bottom{
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.service-up:hover .service-bottom{
+  display: inline-block;
+  z-index: -10;
+}

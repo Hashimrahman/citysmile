@@ -19,15 +19,14 @@
 
 // export default Services;
 
-
 import services from "./Service_Assets/services";
 // import Image from './Service_Assets/service_bg.png';
 // import bgImage from "./Service_Assests/"
-import bgImage from "../../assets/bg.png"
+import bgImage from "../../assets/bg.png";
 
 const Services = () => {
   return (
-    <div className="py-12 px-8 mb-20 relative mt-10">
+    <div className="py-12 px-8 mb-20 relative mt-10 ">
       <img
         src={bgImage}
         alt="background decor"
@@ -35,10 +34,10 @@ const Services = () => {
       />
       {/* Heading Section */}
       <div className="text-center mb-12">
-        <h4 className="text-lg font-semibold tracking-wider uppercase">
+        <h4 className="text-base md:text-lg font-semibold tracking-wider uppercase text-grayBlue">
           Category
         </h4>
-        <h1 className="text-4xl font-bold text-gray-800 mt-2">
+        <h1 className="text-3xl md:text-4xl font-bold text-navyBlue mt-2 font-volkhov">
           We Offer Best Services
         </h1>
       </div>
@@ -48,22 +47,25 @@ const Services = () => {
         {services.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-3xl p-6 w-full sm:w-[45%] md:w-[30%] lg:w-[22%] transition-transform transform hover:scale-105 hover:shadow-lg hover:cursor-pointer"
+            className="relative service-up rounded-3xl w-full sm:w-[45%] md:w-[30%] lg:w-[22%] transition-all transform hover:scale-105 hover:shadow-lg hover:cursor-pointer ease-in-out duration-500 "
           >
-            {/* Image */}
-            <div className="mb-4">
-              <img
-                src={item.Image}
-                alt={item.title}
-                className="object-contain mx-auto"
-              />
+            <div className="z-10 bg-white w-full p-6 rounded-3xl ">
+              {/* Image */}
+              <div className="mb-4">
+                <img
+                  src={item.Image}
+                  alt={item.title}
+                  className="object-contain mx-auto"
+                />
+              </div>
+              {/* Title */}
+              <h2 className="text-xl font-semibold text-gray-800 mb-2 text-center">
+                {item.title}
+              </h2>
+              {/* Description */}
+              <h4 className="text-gray-600 text-center">{item.desc}</h4>
             </div>
-            {/* Title */}
-            <h2 className="text-xl font-semibold text-gray-800 mb-2 text-center">
-              {item.title}
-            </h2>
-            {/* Description */}
-            <h4 className="text-gray-600 text-center">{item.desc}</h4>
+            <div className="absolute -bottom-10 -left-10 md:w-28 md:h-28 bg-flamingo_red -z-10 service-bottom rounded-tl-3xl rounded-br-xl opacity-75 transition-all ease-in-out duration-300"></div>
           </div>
         ))}
       </div>

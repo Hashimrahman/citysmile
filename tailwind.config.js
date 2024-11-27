@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT( {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -14,7 +17,8 @@ export default {
       },
       boxShadow:{
          'primary': '0 2px 10px -1px #DF6951',
-         'secondary' : '0 2px 15px -4px #F1A501'
+         'secondary' : '0 2px 15px -4px #F1A501',
+         'custom-light': '0 6px 30px -10px rgb(89, 177, 230)',
       },
       fontFamily: {
         volkhov: ['Volkhov', 'serif'], // Add Volkhov to the font stack
@@ -23,5 +27,5 @@ export default {
     },
   },
   plugins: [],
-}
+})
 
