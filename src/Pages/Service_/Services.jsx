@@ -47,7 +47,7 @@ const Services = () => {
         {services.map((item) => (
           <div
             key={item.id}
-            className="relative service-up rounded-3xl w-full sm:w-[45%] md:w-[30%] lg:w-[22%] transition-all transform hover:scale-105 hover:shadow-lg hover:cursor-pointer ease-in-out duration-500 "
+            className="relative service-up rounded-3xl w-full sm:w-[45%] md:w-[30%] lg:w-[22%] shadow-lg md:shadow-none transition-all transform md:hover:scale-105 hover:shadow-lg hover:cursor-pointer ease-in-out duration-500 "
           >
             <div className="z-10 bg-white w-full p-6 rounded-3xl ">
               {/* Image */}
