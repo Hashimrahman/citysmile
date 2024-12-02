@@ -26,19 +26,16 @@ import bgImage from "../../assets/bg.png";
 
 const Services = () => {
   return (
-    <div className="py-12 px-8 mb-20 relative mt-10 ">
+    <div className="px-8 mb-20 relative mt-32 ">
       <img
         src={bgImage}
         alt="background decor"
-        className="absolute top-0 right-0  -z-10"
+        className="absolute top-0 right-0 -z-10"
       />
       {/* Heading Section */}
       <div className="text-center mb-12">
-        <h4 className="text-base md:text-lg font-semibold tracking-wider uppercase text-grayBlue">
-          Category
-        </h4>
-        <h1 className="text-3xl md:text-4xl font-bold text-navyBlue mt-2 font-volkhov">
-          We Offer Best Services
+        <h1 className="text-3xl md:text-4xl font-bold text-navyBlue mt-2 font-volkhov ">
+          We Offer The Best Services
         </h1>
       </div>
 

@@ -40,7 +40,7 @@ import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 text-white py-10 px-12">
+    <div className="bg-blue-100 text-black py-10 px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Branding Section */}
         <div className="flex flex-col items-start">
@@ -55,22 +55,22 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-2">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#about" className="hover:text-yellow-400">
+              <a href="#about" className="hover:text-[#0ea5e9]">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#services" className="hover:text-yellow-400">
+              <a href="#services" className="hover:text-[#0ea5e9]">
                 Services
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-yellow-400">
+              <a href="#contact" className="hover:text-[#0ea5e9]">
                 Contact Us
               </a>
             </li>
             <li>
-              <a href="#faq" className="hover:text-yellow-400">
+              <a href="#faq" className="hover:text-[#0ea5e9]">
                 FAQs
               </a>
             </li>
@@ -87,11 +87,11 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="px-4 py-2 rounded bg-blue-800 text-white focus:outline-none focus:ring-2 focus:ring-[#0ea5e9]"
             />
             <button
               type="submit"
-              className="px-4 py-2 rounded bg-yellow-400 text-gray-900 font-bold hover:bg-yellow-500 transition"
+              className="px-4 py-2 rounded bg-[#38BDF8] text-gray-900 font-bold hover:bg-[#0ea5e9] transition"
             >
               Subscribe
             </button>

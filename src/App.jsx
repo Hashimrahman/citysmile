@@ -4,10 +4,11 @@ import Hero from './Pages/Hero/Hero'
 import Navbar from './components/Navbar/Navbar'
 import Services from './Pages/Service_/Services'
 import Welcome from './Pages/Welcome'
-import Destinations from './Pages/Destinations/Destinations'
+// import Destinations from './Pages/Destinations/Destinations'
 import Benefits from './components/Benefits/Benefits'
 import AboutLanding from './Pages/LandingAbout/About'
 import Footer from './components/Footer/Footer'
+import GetInTouch from './components/GetInTouch/GetInTouch'
 
 function App() {
 
@@ -19,8 +20,9 @@ function App() {
       </Routes>
       <AboutLanding />
       <Services />
+      <GetInTouch />
       <Benefits />
-      <Destinations />
+      {/* <Destinations /> */}
       <Footer />
       {/* <Welcome /> */}
     </>
