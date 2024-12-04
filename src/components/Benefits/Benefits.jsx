@@ -5,7 +5,7 @@ const Benefits = () => {
   return (
     <div className="w-full flex justify-center my-20">
       <div className="w-2/3 shadow-lg py-8 rounded-3xl flex flex-col">
-        <h1 className="text-3xl md:text-4xl font-bold text-navyBlue my-2 font-volkhov text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-navyBlue my-2 font-roboto text-center">
           Why Choose Us
         </h1>
         <div className="flex flex-wrap">

@@ -87,6 +87,14 @@ const Hero = () => {
       transition: { duration: 2, ease: "easeOut" },
     },
   };
+  const services = [
+    { icon: <MdFlight className="text-xl" />, title: "Flight Booking" },
+    { icon: <MdFlight className="text-xl" />, title: "Hotel Booking" },
+    { icon: <MdFlight className="text-xl" />, title: "Car Rental" },
+    { icon: <MdFlight className="text-xl" />, title: "Travel Guides" },
+    { icon: <MdFlight className="text-xl" />, title: "Travel Guides" },
+    { icon: <MdFlight className="text-xl" />, title: "Travel Guides" },
+  ];
 
   return (
     <div className="relative overflow-hidden">
@@ -99,7 +107,7 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="h-[75vh] bg-blue-100 md:bg-transparent md:h-screen grid grid-cols-1 lg:grid-cols-2 sm:mt-0 w-full place-items-center"
+        className="h-[85vh] bg-blue-100 mt-14 md:bg-transparent md:h-screen grid grid-cols-1 xl:grid-cols-2 md:mt-0 w-full place-items-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -139,7 +147,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden lg:inline-block p-16 h-full">
+        <div className="hidden xl:inline-block p-16 h-full">
           <div className="w-full h-full flex items-center justify-center">
             <img
               src={Image}
@@ -149,79 +157,57 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-      {/* mobile services */}
-      {/* <div className="flex md:hidden bg-blue-900 h-auto justify-evenly py-4 mb-10 mx-3 gap-3 rounded-lg ">
-        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-3 rounded-md flex-1 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-2xl " />
-          <h1>Tickets booking</h1>
-        </div>
-        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-3 rounded-md flex-1 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-2xl " />
-          <h1>Tickets booking</h1>
-        </div>
-        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-3 rounded-md flex-1 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-2xl " />
-          <h1>Tickets booking</h1>
-        </div>
-        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-3 rounded-md flex-1 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-2xl " />
-          <h1>Tickets booking</h1>
-        </div>
-      </div> */}
       {/* Mobile Services */}
-      {/* <div className="flex md:hidden bg-blue-900 h-auto justify-center py-4 mb-10 mx-3 gap-x-3 rounded-lg -mt-12">
-        {Array(4)
-          .fill("")
-          .map((_, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-center items-center text-base bg-blue-100 p-3 rounded-md w-20 text-center text-navyBlue hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
-            >
-              <MdFlight className="text-2xl" />
-              <h1>Tickets</h1>
-            </div>
-          ))}
-      </div> */}
-      {/* Mobile Services */}
-      <div className="flex md:hidden bg-blue-900 h-auto justify-center py-4 mb-4 mx-3 gap-x-3 rounded-lg -mt-12">
-        {[
-          { icon: <MdFlight className="text-2xl" />, title: "Flight Booking" },
-          { icon: <MdFlight className="text-2xl" />, title: "Hotel Booking" },
-          { icon: <MdFlight className="text-2xl" />, title: "Car Rental" },
-          { icon: <MdFlight className="text-2xl" />, title: "Travel Guides" },
-        ].map((service, index) => (
+      <motion.div
+        className="flex flex-wrap md:hidden bg-white h-auto justify-center p-4 mb-4 mx-3 gap-3 rounded-xl -mt-12"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        {services.map((service, index) => (
           <div
             key={index}
             className="flex flex-col justify-center items-center text-base bg-blue-100 p-3 rounded-md w-20 text-center text-navyBlue hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
           >
             {service.icon}
-            <h1 className="text-sm">{service.title}</h1>
+            <h1 className="text-xs">{service.title}</h1>
           </div>
         ))}
-      </div>
+      </motion.div>
 
       {/* lap services */}
-      <div className="bg-blue-900 h-auto hidden md:flex justify-evenly py-4 mb-10 mx-32 rounded-lg ">
-        <div className="flex flex-col justify-center items-center text-l bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-5xl " />
-          <h1>Tickets booking</h1>
+      {/* <div className="bg-blue-900 h-auto hidden md:flex justify-evenly gap-x-3 p-4 mb-10 mx-16 lg:mx-32 rounded-lg ">
+        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-6 rounded-md text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
+          <MdFlight className="text-3xl" />
+          <h1 className="text-base">Tickets booking</h1>
         </div>
-        <div className="flex flex-col justify-center items-center text-l bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-5xl " />
-          <h1>Tickets booking</h1>
+        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
+          <MdFlight className="text-3xl " />
+          <h1 className="text-base">Tickets booking</h1>
         </div>
-        <div className="flex flex-col justify-center items-center text-l bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-5xl " />
-          <h1>Tickets booking</h1>
+        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
+          <MdFlight className="text-3xl " />
+          <h1 className="text-base">Tickets booking</h1>
         </div>
-        <div className="flex flex-col justify-center items-center text-l bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-5xl " />
-          <h1>Tickets booking</h1>
+        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
+          <MdFlight className="text-3xl " />
+          <h1 className="text-base">Tickets booking</h1>
         </div>
-        <div className="flex flex-col justify-center items-center text-l bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
-          <MdFlight className="text-5xl " />
-          <h1>Tickets booking</h1>
+        <div className="flex flex-col justify-center items-center text-base bg-blue-100 p-6 rounded-md w-36 text-center text-navyBlue hover: cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
+          <MdFlight className="text-3xl " />
+          <h1 className="text-base">Tickets booking</h1>
         </div>
+      </div> */}
+      <div className="bg-blue-900 h-auto hidden md:inline-flex w-auto flex-wrap justify-center lg:justify-start gap-3 p-6 mb-10  rounded-r-lg">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-center items-center text-base bg-blue-100 p-6 rounded-md text-center text-navyBlue hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
+          >
+            {service.icon}
+            <h1 className="text-base">{service.title}</h1>
+          </div>
+        ))}
       </div>
     </div>
   );

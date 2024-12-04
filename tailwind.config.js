@@ -23,6 +23,8 @@ module.exports = withMT( {
       fontFamily: {
         volkhov: ['Volkhov', 'serif'], // Add Volkhov to the font stack
         graieste: ['Graieste', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        poppins: ['Poppins'],
       },
     },
   },

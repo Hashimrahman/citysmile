@@ -5,10 +5,10 @@ const GetInTouch = () => {
   return (
     <div className="bg-blue-900 text-white py-10 px-8 shadow-lg">
       {/* Title Section */}
-      <h2 className="text-3xl font-extrabold text-center mb-4">
+      <h2 className="text-3xl font-extrabold text-center mb-4 font-roboto">
         We&apos;d Love to Hear from You!
       </h2>
-      <p className="text-center text-blue-400 mb-6">
+      <p className="text-center text-blue-400 mb-6 font-poppins">
         Whether you have a question or just want to stay updated, feel free to
         drop us a message or connect with us on social media.
       </p>
@@ -33,7 +33,7 @@ const GetInTouch = () => {
         ></textarea>
         <button
           type="submit"
-          className="w-full sm:w-2/3 px-4 py-2 rounded bg-yellow-400 text-blue-900 font-bold hover:bg-yellow-500 transition"
+          className="w-full sm:w-2/3 px-4 py-2 rounded bg-[#38BDF8] hover:bg-[#0ea5e9] text-black font-bold  transition"
         >
           Send Message
         </button>
