@@ -18,6 +18,7 @@ module.exports = withMT( {
       boxShadow:{
          'primary': '0 2px 10px -1px #DF6951',
          'secondary' : '0 2px 15px -4px #F1A501',
+         'ternary' : '0 2px 15px -4px #01F195',
          'custom-light': '0 6px 30px -10px rgb(89, 177, 230)',
       },
       fontFamily: {

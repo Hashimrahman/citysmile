@@ -1,22 +1,22 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import Hero from './Pages/Hero/Hero'
-import Navbar from './components/Navbar/Navbar'
-import Services from './Pages/Service_/Services'
-import Welcome from './Pages/Welcome'
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Hero from "./Pages/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import Services from "./Pages/Service_/Services";
+import Welcome from "./Pages/Welcome";
 // import Destinations from './Pages/Destinations/Destinations'
-import Benefits from './components/Benefits/Benefits'
-import AboutLanding from './Pages/LandingAbout/About'
-import Footer from './components/Footer/Footer'
-import GetInTouch from './components/GetInTouch/GetInTouch'
+import Benefits from "./components/Benefits/Benefits";
+import AboutLanding from "./Pages/LandingAbout/About";
+import Footer from "./components/Footer/Footer";
+import GetInTouch from "./components/GetInTouch/GetInTouch";
+import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
-
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Hero />} />
+        <Route path="/" element={<Hero />} />
       </Routes>
       <AboutLanding />
       <Services />
@@ -25,13 +25,17 @@ function App() {
       {/* <Destinations /> */}
       <Footer />
       {/* <Welcome /> */}
+      <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10 text-lg bg-green-400 rounded-full md:rounded-3xl flex items-center px-2 md:px-4 py-2 gap-2 text-white">
+        <FaWhatsapp className="text-2xl" />
+        <h1 className="">Contact Us</h1>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
 
-App.jsx
+App.jsx;
 // import React, { useState } from 'react';
 
 // function App() {
@@ -57,8 +61,8 @@ App.jsx
 //   return (
 //     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
 //       <div className="text-center -translate-y-14">
-//         <button 
-//           onClick={handleClick} 
+//         <button
+//           onClick={handleClick}
 //           className="px-4 py-2 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
 //         >
 //           Generate !!

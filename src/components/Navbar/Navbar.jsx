@@ -184,6 +184,8 @@ import {
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 
+import logo from "../../assets/logo-temp.png";
+
 function NavbarDisplay() {
   const [openNav, setOpenNav] = React.useState(false);
 
@@ -209,7 +211,7 @@ function NavbarDisplay() {
           color="blue-gray"
           className="p-1 font-normal hover:text-blue-500 transition duration-300 ease-in-out"
         >
-          <a href={navItem.href} className="flex items-center">
+          <a href={navItem.href} className="flex items-center pl-6">
             {navItem.label}
           </a>
         </Typography>
@@ -218,43 +220,56 @@ function NavbarDisplay() {
   );
 
   return (
-    <Navbar className="fixed top-0 z-10 h-max max-w-full rounded-none px-4 py-2 shadow-md lg:px-8 lg:py-4 backdrop-blur-sm bg-transparent">
+    <Navbar className={`fixed top-0 z-10 h-max max-w-full rounded-none px-4 ${openNav == true ? 'pb-2' : 'py-0'} shadow-md lg:px-8 lg:py-2 backdrop-blur-sm bg-transparent`}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer py-1.5 text-xl font-bold hover:text-blue-500 transition duration-300 ease-in-out"
+          className="mr-4 cursor-pointer py-1.5 text-3xl md:text-4xl  font-bold flex items-end justify-center gap-2 hover:text-blue-500 transition duration-300 ease-in-out font-volkhov"
         >
-          City<span className="text-blue-500"> Smiles</span>
+          {/* Logo */}
+          <img
+            src={logo}
+            alt="City Smiles Logo"
+            className="h-14 w-1h-14 object-contain "
+          />
+          {/* Brand Name */}
+          City<span className="text-blue-500 font-volkhov"> Smiles</span>
         </Typography>
-        <div className="flex items-center gap-4">
+
+        <div className="flex items-center gap-4 ">
           <div className="mr-4 hidden lg:block">{navList}</div>
           <div className="flex items-center gap-x-1">
             <Button
               variant="text"
-              // size="xl"
               className="hidden lg:inline-block hover:bg-blue-50 hover:text-blue-500 transition duration-300 ease-in-out text-2xl"
             >
-              <span><FaInstagram/></span>
+              <span>
+                <FaInstagram />
+              </span>
             </Button>
             <Button
               variant="text"
               size="xl"
               className="hidden lg:inline-block hover:bg-blue-50 hover:text-blue-500 transition duration-300 ease-in-out text-2xl"
             >
-              <span><FaFacebook /></span>
+              <span>
+                <FaFacebook />
+              </span>
             </Button>
             <Button
               variant="text"
               size="xl"
               className="hidden lg:inline-block hover:bg-blue-50 hover:text-blue-500 transition duration-300 ease-in-out text-2xl"
             >
-              <span><RiTwitterXFill /></span>
+              <span>
+                <RiTwitterXFill />
+              </span>
             </Button>
           </div>
           <IconButton
             variant="text"
-            className="ml-auto h-6 w-6 text-inherit hover:bg-gray-100 focus:bg-gray-200 active:bg-gray-300 lg:hidden"
+            className="ml-auto h-6 w-6 text-inherit p-4  lg:hidden"
             ripple={false}
             onClick={() => setOpenNav(!openNav)}
           >
@@ -291,7 +306,7 @@ function NavbarDisplay() {
           </IconButton>
         </div>
       </div>
-      <MobileNav open={openNav} className="bg-white shadow-md">
+      <MobileNav open={openNav} className="bg-white shadow-md mt-4">
         {navList}
         <div className="flex items-center gap-x-1 mt-4 justify-evenly">
           <Button
@@ -300,7 +315,9 @@ function NavbarDisplay() {
             size="sm"
             className="hover:bg-blue-50 hover:text-blue-500 transition duration-300 ease-in-out text-2xl flex justify-center"
           >
-            <span><FaInstagram /></span>
+            <span>
+              <FaInstagram />
+            </span>
           </Button>
           <Button
             fullWidth
@@ -308,7 +325,9 @@ function NavbarDisplay() {
             size="sm"
             className="hover:bg-blue-50 hover:text-blue-500 transition duration-300 ease-in-out text-2xl flex justify-center"
           >
-            <span><FaFacebook /></span>
+            <span>
+              <FaFacebook />
+            </span>
           </Button>
           <Button
             fullWidth
@@ -316,7 +335,9 @@ function NavbarDisplay() {
             size="sm"
             className="hover:bg-blue-50 hover:text-blue-500 transition duration-300 ease-in-out text-2xl flex justify-center"
           >
-            <span><RiTwitterXFill /></span>
+            <span>
+              <RiTwitterXFill />
+            </span>
           </Button>
         </div>
       </MobileNav>
