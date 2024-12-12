@@ -67,20 +67,17 @@
 // export default Hero;
 
 import { motion } from "framer-motion";
-import { FaPlay, FaWhatsapp } from "react-icons/fa";
+import { FaCar, FaHotel, FaPlay, FaWhatsapp } from "react-icons/fa";
 import Image from "./Hero_Assets/Image.png";
 import Decore from "./Hero_Assets/Decore.png";
 import Mobilehero from "./Hero_Assets/mobile-hero.png";
 import Mobilehero2 from "./Hero_Assets/mobile-hero2.png";
 import TextDecore from "./Hero_Assets/Text-Decore.png";
-import { MdFlight } from "react-icons/md";
+import { MdFlight, MdModeOfTravel } from "react-icons/md";
+import { GiPassport } from "react-icons/gi";
+import { PiChalkboardTeacherBold } from "react-icons/pi";
 
 const Hero = () => {
-  // Animation variants for the container
-  // const containerVariants = {
-  //   hidden: { opacity: 0 },
-  //   visible: { opacity: 1,transition: { duration: 0.5 } },
-  // };
   const containerVariants = {
     hidden: { y: "-10vh", opacity: 0 },
     visible: {
@@ -90,12 +87,18 @@ const Hero = () => {
     },
   };
   const services = [
-    { icon: <MdFlight className="text-xl" />, title: "Flight Booking" },
-    { icon: <MdFlight className="text-xl" />, title: "Hotel Booking" },
-    { icon: <MdFlight className="text-xl" />, title: "Car Rental" },
-    { icon: <MdFlight className="text-xl" />, title: "Travel Guides" },
-    { icon: <MdFlight className="text-xl" />, title: "Travel Guides" },
-    { icon: <MdFlight className="text-xl" />, title: "Travel Guides" },
+    { icon: <MdFlight className="text-3xl" />, title: "Flight Booking" },
+    { icon: <FaHotel className="text-3xl" />, title: "Hotel Booking" },
+    {
+      icon: <MdModeOfTravel className="text-3xl" />,
+      title: "Holiday Planning",
+    },
+    { icon: <FaCar className="text-3xl" />, title: "Car Rental" },
+    { icon: <GiPassport className="text-3xl" />, title: "Passports" },
+    {
+      icon: <PiChalkboardTeacherBold className="text-3xl" />,
+      title: "Travel Guides",
+    },
   ];
 
   return (
@@ -109,16 +112,16 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="h-[85vh] bg-blue-100 mt-[85px] md:bg-transparent md:h-screen grid grid-cols-1 xl:grid-cols-2 md:mt-4 w-full place-items-start md:place-items-center"
+        className="h-[85vh] bg-blue-100 mt-[85px] md:bg-transparent md:h-screen grid grid-cols-1 lg:grid-cols-2 md:mt-4 w-full place-items-start md:place-items-center md:ml-5 -z-30"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="md:p-16 md:flex flex-col gap-6 justify-center mx-10 mt-6 md:mt-0 hidden">
+        <div className="md:p-10 md:flex flex-col gap-6 justify-center mx-0 mt-6 md:mt-0 hidden">
           <h3 className="text-lg md:text-xl text-flamingo_red text-left hidden md:inline-block">
             Best Destinations around the world
           </h3>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-navyBlue font-volkhov">
+          <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-navyBlue font-volkhov">
             Travel,{" "}
             <span className="relative pr-32 text-left font-volkhov">
               <img
@@ -132,14 +135,22 @@ const Hero = () => {
             <br /> and full life
           </h1>
           <p className="text-grayBlue text-justify text-sm md:text-base">
-            Built Wicket longer admire do barton vanity itself do in it.
-            Preferred to sportsmen it engrossed listening. Park gate sell they
-            west hard for the.
+            Streamlined travel documentation for your ideal journey.
           </p>
           <div className="flex gap-8">
             <button className="flex items-center gap-2 text-xl bg-green-600 text-white px-4 py-2 rounded-3xl shadow-ternary hover:scale-105 transition-all duration-500">
               <FaWhatsapp /> Contact Us
             </button>
+          </div>
+        </div>
+
+        <div className="hidden lg:inline-block p-16 h-full">
+          <div className="w-full h-full flex items-center justify-center">
+            <img
+              src={Image}
+              alt="Travel destination"
+              className="w-full h-auto"
+            />
           </div>
         </div>
 
@@ -165,17 +176,8 @@ const Hero = () => {
         </div>
 
         {/* ======================================== */}
-
-        <div className="hidden xl:inline-block p-16 h-full">
-          <div className="w-full h-full flex items-center justify-center">
-            <img
-              src={Image}
-              alt="Travel destination"
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
       </motion.div>
+
       {/* Mobile Services */}
       <motion.div
         className="flex flex-wrap md:hidden bg-white h-auto justify-center p-4 mb-4 mx-3 gap-3 rounded-xl -mt-12 z-10"

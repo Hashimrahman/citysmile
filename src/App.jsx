@@ -2,32 +2,34 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Hero from "./Pages/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-import Services from "./Pages/Service_/Services";
+import Services from "./Pages/ServicePage/Services";
 import Welcome from "./Pages/Welcome";
 // import Destinations from './Pages/Destinations/Destinations'
 import Benefits from "./components/Benefits/Benefits";
 import AboutLanding from "./Pages/LandingAbout/About";
 import Footer from "./components/Footer/Footer";
 import GetInTouch from "./components/GetInTouch/GetInTouch";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/ContactUs";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} /> 
+        <Route path="/about" element={<About />} /> 
+        <Route path="/contact" element={<Contact />} /> 
       </Routes>
-      <AboutLanding />
-      <Services />
-      <GetInTouch />
-      <Benefits />
-      {/* <Destinations /> */}
       <Footer />
-      {/* <Welcome /> */}
-      <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10 text-lg bg-green-400 rounded-full md:rounded-3xl flex items-center px-2 md:px-4 py-2 gap-2 text-white">
-        <FaWhatsapp className="text-2xl" />
-        <h1 className="">Contact Us</h1>
+      <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10 text-lg bg-blue-900 rounded-full md:rounded-3xl flex items-center px-2 md:px-4 py-2 gap-2 text-white">
+        <FaPhoneAlt className="text-2xl" />
+        <h1 className="">Make a Call</h1>
       </div>
     </>
   );

@@ -40,7 +40,8 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import logo from "../../assets/logo.png";
+import About from "../../assets/About.png";
+import AboutMobile from "../../assets/About-mobile.png";
 // import aboutbg from "../../assets/about-bg.jpg";
 
 const AboutLanding = () => {
@@ -85,26 +86,23 @@ const AboutLanding = () => {
           variants={variants}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
-          <div className="md:w-1/2 flex justify-center items-center lg:-translate-y-12">
-            <img src={logo} alt="Logo" className="" />
+          <div className="md:w-1/2 flex justify-center items-center lg:-translate-y-12 md:px-8 my-4">
+            <img src={About} alt="Logo" className="hidden md:inline-block" />
+            <img src={AboutMobile} alt="Logo" className="md:hidden" />
           </div>
           <div className="md:w-1/2">
-            <p className="text-justify">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
-              placeat minus voluptate magni, quaerat numquam iusto labore. Ab at
-              ea culpa fugiat corrupti numquam commodi!
+            <p className="text-justify text-lg">
+              City Smile is your trusted partner in travel documentation
+              services. With extensive expertise in the industry, we specialize
+              in a wide range of solutions for passports and visas, including
+              stamping, attestations, documentation, and certificate
+              attestation.
             </p>
-            <br />
-            <p className="text-justify">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora,
-              vitae alias neque harum dolore soluta assumenda, nam error iusto,
-              omnis unde ad iste ea nostrum facilis. Eveniet eaque ex atque unde
-              fugiat deserunt beatae, id praesentium voluptates fugit, suscipit
-              eius. Architecto provident aliquam aspernatur atque dolor et?
-              Temporibus laborum fugiat unde ducimus quo corrupti accusamus, in
-              impedit, at explicabo voluptatem voluptate! Aliquid asperiores,
-              tempora mollitia adipisci, consequatur minus veritatis beatae,
-              quia fugiat nisi fuga repellat.
+            <br /><br />
+            <p className="text-justify text-lg">
+              Our commitment to precision and excellence ensures a seamless,
+              stress free experience, enabling your travel plans to proceed
+              smoothly while meeting all legal requirements.
             </p>
           </div>
         </motion.div>
